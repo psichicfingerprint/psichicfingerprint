@@ -65,16 +65,26 @@
             border-radius: 5px;
             text-decoration: none;
             margin-top: 20px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
         .header-text .cta-button:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .header-image img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .header-image {
+                display: none;
+            }
+            .header-text {
+                text-align: center;
+            }
         }
         .content {
             background-color: #ffffff;
@@ -102,6 +112,9 @@
         }
         .note a {
             text-decoration: none;
+        }
+        .note img {
+            vertical-align: middle;
         }
         iframe {
             width: 100%;
@@ -131,10 +144,9 @@
             <h2>Welcome to PSICHIC Demo!</h2>
             <p>PSICHIC (PhySIcoCHemICal graph neural network) is a groundbreaking tool for drug discovery, predicting protein-ligand interactions directly from sequence data. Here's why it's so special:</p>
             <ul>
-                <li>Trained on identical protein-ligand pairs without structural data, PSICHIC matched and even surpassed state-of-the-art structure-based methods in binding affinity prediction.</li>
-                <li>PSICHIC achieved a high 0.96 accuracy in functional effect prediction.</li>
-                <li>PSICHIC's interpretable fingerprint decodes mechanisms underlying protein-ligand interactions, identifying binding site protein residues and involved ligand atoms from sequence data alone.</li>
-                <li>Model capabilities have also been experimentally validated to discover potential drugs.</li>
+                <li><strong>State-of-the-Art</strong>: Trained on identical protein-ligand pairs without structural data, PSICHIC matched and even surpassed state-of-the-art structure-based methods in binding affinity prediction. PSICHIC also achieved a high 0.96 accuracy in predicting functional effects or in other words, the way in which the drug might affect our bodies.</li>
+                <li><strong>Emergent Interpretability</strong>: PSICHIC's interpretable fingerprint decodes mechanisms underlying protein-ligand interactions, identifying binding site protein residues and involved ligand atoms from sequence data alone.</li>
+                <li><strong>Experimentally Validated</strong>: Model capabilities have also been experimentally validated to discover potential drugs.</li>
             </ul>
             <h3>How to Use PSICHIC <span style="font-size: 0.8em;">(sequence data is all you need)</span>:</h3>
             <ul>
