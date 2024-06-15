@@ -150,12 +150,12 @@
             </ul>
             <h3>How to Use PSICHIC <span style="font-size: 0.8em;">(sequence data is all you need)</span>:</h3>
             <ul>
-                <li><strong>Step 1</strong>: Enter the protein sequence.</li>
-                <li><strong>Step 2</strong>: Enter the ligand's SMILES string.</li>
+                <li><strong>Step 1</strong>: Enter a protein sequence.</li>
+                <li><strong>Step 2</strong>: Enter ligand's SMILES string(s).</li>
                 <li><strong>Step 3</strong>: Run the model and discover your next big breakthrough!</li>
             </ul>
             <div class="note">
-                <strong>NOTE:</strong> This process will be slow because we are running on a free single CPU webserver. For faster processing (Up to 100K compounds in an hour), use free GPU on Colab
+                <strong>NOTE:</strong> We only allow <span style="color: red;">ONE</span> protein target against up to 1,000 ligand compounds per run. Estimated completion time is ~1 minute. We are hosting potentially many jobs with only one server, and each run needs to reinitialize the model from scratch, so it could take longer. For more flexible and scalable processing (up to 100K compounds in an hour), use the free GPU on Colab
                 <a href="https://colab.research.google.com/github/huankoh/PSICHIC/blob/main/PSICHIC.ipynb" target="_parent">
                     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
                 </a> or deploy locally using 
